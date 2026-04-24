@@ -1,15 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   LayoutDashboard,
   Package,
-  Boxes,
-  ArrowDownCircle,
-  ArrowUpCircle,
-  ClipboardList,
-  Settings,
   LogOut,
 } from "lucide-react";
 
@@ -28,6 +23,15 @@ const menuItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    // hapus data login (contoh)
+    localStorage.removeItem("token");
+
+    // redirect ke login
+    router.push("/login");
+  };
 
   return (
     <aside className="hidden min-h-screen w-[280px] flex-col border-r border-slate-200 bg-slate-900 text-white lg:flex">
@@ -67,7 +71,10 @@ export default function Sidebar() {
       </div>
 
       <div className="border-t border-slate-800 p-4">
-        <button className="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">
+        <button
+          onClick={handleLogout}
+          className="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white"
+        >
           <LogOut size={18} />
           Logout
         </button>
