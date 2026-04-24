@@ -24,7 +24,7 @@ export default function LoginPage() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/");
+      router.push("/dashboard");
     } catch (err: any) {
       if (err.code === "auth/invalid-credential") {
         setError("Email atau password tidak valid.");

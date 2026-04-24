@@ -25,7 +25,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/login"
-              className="rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-slate-700"
+              className="rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-black shadow transition hover:bg-slate-700"
             >
               Login
             </Link>
