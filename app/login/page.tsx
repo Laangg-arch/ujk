@@ -70,7 +70,7 @@ export default function LoginPage() {
 
           <div className="p-8 md:p-12">
             <div className="mx-auto w-full max-w-md">
-              <h2 className="text-3xl font-bold text-slate-900">Login</h2>
+              <h2 className="text-3xl font-bold text-slate-300">Login</h2>
               <p className="mt-2 text-sm text-slate-500">
                 Silakan masuk menggunakan akun yang sudah terdaftar.
               </p>
@@ -86,7 +86,7 @@ export default function LoginPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-black outline-none transition focus:border-slate-900"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-900"
                   />
                 </div>
 
